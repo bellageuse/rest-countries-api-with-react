@@ -1,10 +1,10 @@
 import "./App.css";
-import Card from "./components/Card.js";
-const url = "https://restcountries.com/v2/all";
+import Countries from "./components/Countries";
+
 function App() {
   return (
     <div>
-      <Card />
+      <Countries />
     </div>
   );
 }
