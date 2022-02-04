@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Card, Row, Col } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Card, Container, Row, Col } from "react-bootstrap";
+import "./Countries.css";
 const url = "https://restcountries.com/v2/all";
 const Countries = () => {
   const [countries, setCountries] = useState([]);
@@ -20,31 +22,35 @@ const Countries = () => {
           country;
 
         return (
-          <Row style={{ display: "grid" }}>
-            <Col xs={1} md={2} xl={4}>
-              <Card style={{ width: "18rem" }}>
-                <Card.Img variant="top" src={flag} />
-                <Card.Body>
-                  <Card.Title>
-                    <span>Country:</span>
-                    {name}
-                  </Card.Title>
-                  <Card.Text>
-                    <span>Capital:</span>
-                    {capital}
-                  </Card.Text>
-                  <Card.Text>
-                    <span>Region:</span>
-                    {region}
-                  </Card.Text>
-                  <Card.Text>
-                    <span>Population:</span>
-                    {population}
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
+          <Container fluid>
+            <Row xs={1} md={2} lg={5} className="g-4">
+              {countries.map(({ country, numericCode }) => (
+                <Col>
+                  <Card style={{ width: "18rem" }}>
+                    <Card.Img src={flag} />
+                    <Card.Body>
+                      <Card.Title>
+                        Country:
+                        {name}
+                      </Card.Title>
+                      <Card.Text>
+                        Capital:
+                        {capital}
+                      </Card.Text>
+                      <Card.Text>
+                        Region:
+                        {region}
+                      </Card.Text>
+                      <Card.Text>
+                        Population:
+                        {population}
+                      </Card.Text>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              ))}
+            </Row>
+          </Container>
         );
       })}
     </div>
