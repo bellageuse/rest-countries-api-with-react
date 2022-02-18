@@ -14,8 +14,8 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
-	font: inherit;
+	
+
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -42,6 +42,9 @@ table {
 	border-spacing: 0;
 }
 .container{
+	max-width: 100%;
+	margin: 50px;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(4,1fr);
+	gap: 50px;
 }

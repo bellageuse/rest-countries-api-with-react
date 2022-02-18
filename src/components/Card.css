@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Kumbh+Sans:wght@300;400;500&family=Lexend+Deca:wght@200&family=Nunito+Sans:wght@300;400;600;800&family=Work+Sans:wght@300;400;500;700&display=swap');
+.card-container{
+    box-shadow: 2px 2px 2px grey;
+    height: 300px;
+    width: 98%;
+    border-radius: 5px;
+}
+.card-container:hover{
+    box-shadow: 4px 4px 20px grey;
+
+}
+img{
+    height: 55%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px 5px 0px 0px;
+}
+.text-container{
+    
+    padding: 10px 20px;
+}
+h1,h3,strong{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 90%;
+    font-weight: 500;
+}
+   
+
