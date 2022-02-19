@@ -3,7 +3,7 @@ import Countries from "./components/Countries";
 
 function App() {
   return (
-    <div>
+    <div className="main-container">
       <Countries />
     </div>
   );
